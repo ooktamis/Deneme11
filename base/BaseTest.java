@@ -5,15 +5,12 @@ import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import util.Browser;
 
 public class BaseTest {
 	
-	
-	static WebDriverWait wait;
+
 	private static WebDriver driver;
 	protected static Browser browser = new Browser();
 	
@@ -32,10 +29,7 @@ public class BaseTest {
 	
 	public static void setDriver(WebDriver driver) { BaseTest.driver= driver; }
 	
-	public static WebDriverWait  Webwait (WebDriver driver) {
-		wait = new WebDriverWait(driver, 10);
-		return wait;
-	}
+
 	
 	public static WebElement findElement(By by) { return driver.findElement(by); }
 	
